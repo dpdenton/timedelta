@@ -1,20 +1,28 @@
-# ReactJS File Uploader
+# TimeDelta
 
-A flexible React component for uploading files. Supports multiple files, progress feedback and upload / abort controls.
-
-<a href="https://reactjs-file-uploader.netlify.com/" target="_blank">View Live Demo</a>
-
-Features
-
-* Multiple files
-* Progress feedback
-* Upload / abort controls
+Helper class to compare two timestamps. 
 
 ## Example
 
 ```jsx
 
-time.stamp(entityState.list.timestamp).isWithin(entityState.list.cache.maxAge).ofNow()
+cosnt timeDelta = new TimeDelta();
+
+// api
+
+timeDelta
+    .stamp(+new Date())
+    .isWithin()
+    .days(5)
+    .hours(4)
+    .minutes(45)
+    .seconds(30)
+    .ofNow();
+
+timeDelta
+    .stamp(entity.timestamp)
+    .isWithin(entity.cache.maxAge)
+    .of(+new Date())
 
 ```
 

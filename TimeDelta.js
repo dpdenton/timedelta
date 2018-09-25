@@ -113,9 +113,11 @@ class TimeDelta  {
         return this;
     }
 
-    isWithin(milliseconds) {
-        this._millisecond = new Millisecond(milliseconds);
-        this._periods.push(this._millisecond);
+    isWithin(milliseconds = null) {
+        if (milliseconds) {
+            this._millisecond = new Millisecond(milliseconds);
+            this._periods.push(this._millisecond);
+        }
         return this;
     }
 
@@ -176,5 +178,18 @@ class TimeDelta  {
     }
 
 }
+
+const timeDelta = new TimeDelta()
+
+
+
+// api
+timeDelta.stamp(+new Date())
+    .isWithin()
+    .days(5)
+    .hours(4)
+    .minutes(45)
+    .seconds(30)
+    .ofNow();
 
 export default TimeDelta;
