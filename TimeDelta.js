@@ -168,8 +168,7 @@ class TimeDelta  {
         this._periods = [];
 
         return eval(`${timeDelta} ${operators[0]} ${this._timestampTarget}`);
-
     }
 }
 
-export default TimeDelta;
+const timeDelta = new TimeDelta();
