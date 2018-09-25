@@ -35,7 +35,6 @@ class Millisecond extends Period {
         this.value = value;
         this.conversion = conversion;
     }
-
 }
 
 class Second extends Period {
@@ -49,7 +48,6 @@ class Second extends Period {
         this.value = value;
         this.conversion = conversion;
     }
-
 }
 
 class Minute extends Period {
@@ -63,7 +61,6 @@ class Minute extends Period {
         this.value = value;
         this.conversion = conversion;
     }
-
 }
 
 class Hour extends Period {
@@ -77,18 +74,15 @@ class Hour extends Period {
         this.value = value;
         this.conversion = conversion;
     }
-
 }
 
 class Day extends Period {
-
 
     constructor(value = 1, conversion = Hour.pip * Minute.pip * Second.pip * Millisecond.pip) {
         super();
         this.value = value;
         this.conversion = conversion;
     }
-
 }
 
 class TimeDelta  {
@@ -176,7 +170,6 @@ class TimeDelta  {
         return eval(`${timeDelta} ${operators[0]} ${this._timestampTarget}`);
 
     }
-
 }
 
 export default TimeDelta;
