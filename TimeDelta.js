@@ -179,17 +179,4 @@ class TimeDelta  {
 
 }
 
-const timeDelta = new TimeDelta()
-
-
-
-// api
-timeDelta.stamp(+new Date())
-    .isWithin()
-    .days(5)
-    .hours(4)
-    .minutes(45)
-    .seconds(30)
-    .ofNow();
-
 export default TimeDelta;
