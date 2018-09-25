@@ -8,8 +8,6 @@ Helper class to compare two timestamps.
 
 cosnt timeDelta = new TimeDelta();
 
-// api
-
 timeDelta
     .stamp(+new Date())
     .isWithin()
